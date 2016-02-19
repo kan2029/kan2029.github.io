@@ -1,0 +1,221 @@
+body{
+	font-family: 'Lato', sans-serif;
+	background: rgba(235, 235, 235, 0.5);
+	background-image: url(../img/background.png);
+  	background-repeat:repeat; 	
+}
+h1{
+	font-size: 32px;
+}
+.hidden{
+	display: none;
+}
+.container{
+	padding-top: 55px;	
+}
+.link{
+	min-height: 170px;
+	position: relative;
+	overflow: hidden;
+}
+#main-content, #link1, #link2, #link3, #link4, #contacts, #resume{
+	background-color: #fff;
+	border-radius: 6px;
+	padding: 50px;
+	box-shadow: 0px 3px 3px 0px #ddd;
+}
+#link1, #link2, #link3, #link4, #contacts, #resume{
+	margin-top: 20px;
+	position: relative;
+}
+#link1, #link2, #link3, #link4{
+	padding: 0px;
+}
+#link1{
+	background-image: url(../img/me.png);
+}
+#link2{
+	background-image: url(../img/resume-sample.jpg);
+}
+#link3{
+	background-image: url(../img/project-sample.jpg);
+}
+#link4{
+	background-image: url(../img/music-sample.jpg);
+}
+.link-caption1{
+	background-color: rgba(204, 136, 13, 0.55);
+}
+.link-caption2{
+	background-color: rgba(33, 103, 212, 0.66);
+}
+.link-caption3{
+	background-color: rgba(228, 0, 0, 0.47);
+}
+.link-caption4{
+	background-color: rgba(0, 128, 128, 0.54);
+}
+.link-caption-text h3{
+    text-align: center;
+    margin: 0px;
+    padding: 6px 0px;
+    position: relative;
+    color: white;
+}
+.link-caption{
+	position: absolute;
+	top:132px;
+	-webkit-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+	width: 100%;
+}
+.link-hover{
+	cursor: pointer;
+}
+.link-hover:hover .link-caption{
+	/*opacity: 1;*/
+	transform: translateY(-132px);
+	-webkit-transform:translateY(-132px);
+	-moz-transform:translateY(-132px);
+	-ms-transform:translateY(-132px);
+	-o-transform:translateY(-132px);
+}
+.link-caption-hidden{
+	height: 132px;
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+    padding: 35px 20px;
+    opacity: 0.8;
+}
+.link-caption-hidden span{
+	font-size: 17px;
+}
+.resume-img{
+	border-radius: 200px;
+}
+.resume-basic-info, .resume-skills-section,
+.resume-education-section, .resume-work-exp-section,
+.resume-accomplishments-section{
+	background-color: #eee;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+.resume-basic-info h1{
+	margin: 0px;
+}
+.resume-accomplishments-section{
+	padding-bottom: 50px;
+}
+
+.education, .work-exp{
+	position: relative;
+}
+
+.education-insti-logo, .work-company-logo{
+	position: absolute;
+    width: 75px;
+    top: 0px;
+    right: 0px;
+}
+
+.work-company-logo{
+	width: 90px;
+}
+
+.resume-name{
+	color: rgba(165, 67, 42, 0.67);
+	font-size: 45px;
+}
+.float-right{
+	float: right;
+}
+.social-link-img{
+	max-width: 50px;
+	border-radius: 30px;
+	margin-left: 10px;
+}
+.social-links{
+	position: relative;
+    top: 25px;
+    left: -9px;
+}
+.border-bottom{
+    border-bottom: 1px solid #ddd;
+}
+.margin-bottom-10{
+	margin-bottom: 10px !important;
+}
+
+.skill-img-wrapper{
+	width: 70px;
+	height: 70px;
+	display: inline;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.skill-img{
+	max-width: 100%;
+	height: 100%;
+	border-radius: 15px;
+}
+
+.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  /*display: table;*/
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 70px;
+  opacity: 0;
+  border-radius: 15px;
+  text-align: center;
+  padding: 23px 0px;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.skill-img-wrapper:hover .text-content {
+  opacity: 1;
+}
+.resume-section{
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	-ms-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out;
+}
+.resume-section:hover{
+	background-color: #ddd;
+}
+.education h4, .work-exp h4{
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
+.work-exp p{
+	margin-top: 12px;
+}
+
+.accomplishment-img{
+	max-width: 100%;
+}
+.resume-accomplishments{
+	position: relative;
+	top: 55px;
+}
+.accomplishment-img-wrapper{
+	padding-left:0px;
+	margin-bottom: 10px;
+}
