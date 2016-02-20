@@ -120,7 +120,7 @@ h1{
 }
 .resume-basic-info, .resume-skills-section,
 .resume-education-section, .resume-work-exp-section,
-.resume-accomplishments-section{
+.resume-accomplishments-section, .resume-certifications-section{
 	background-color: #eee;
 	border-radius: 6px;
 	margin-bottom: 20px;
@@ -130,7 +130,7 @@ h1{
 .resume-basic-info h1{
 	margin: 0px;
 }
-.resume-accomplishments-section{
+.resume-accomplishments-section, .resumr-certifications-section{
 	padding-bottom: 50px;
 }
 
@@ -230,14 +230,14 @@ h1{
 	margin-top: 12px;
 }
 
-.accomplishment-img{
+.accomplishment-img, .certification-img{
 	max-width: 100%;
 }
 .resume-accomplishments{
 	position: relative;
 	top: 55px;
 }
-.accomplishment-img-wrapper{
+.accomplishment-img-wrapper, .certification-img-wrapper{
 	padding-left:0px;
 	margin-bottom: 10px;
 }

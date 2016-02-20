@@ -117,7 +117,11 @@ var karan = {
 					description: 'Was chosen the best fresher of my batch mainly because of my speed of execution and willingness to learn more'
 				},
 			],
-
+			certifications: [
+				{
+					imgSrc: 'img/frontendNanodegree.jpg'
+				}
+			],
 			references: [
 				{
 
@@ -273,6 +277,15 @@ var karan = {
 										'<p>'+this.resume.accomplishments[acc].description+'</p></div><br>';	
 					$('.resume-accomplishments').append(thisAccomplishment);
 				}
+
+				$('.resume-certifications-section').find('h1').eq(0).html('Certifications');
+				for(var certi in this.resume.certifications){
+					var thisCertification = '<div class="certification">'+
+										'<section class="col-xs-12 certification-img-wrapper"><img class="certification-img" src="'+this.resume.certifications[certi].imgSrc+'"></section>'+
+										'</div><br>';	
+					$('.resume-certifications').append(thisCertification);
+				}
+
 				setTimeout(function(){
 					$({count: 2000}).animate({count: 0}, {
 					    duration: 1000,
@@ -282,16 +295,12 @@ var karan = {
 					    }
 					});	
 				}, 300);
-
-
 			}
 			else{
 				$('html, body').animate({
 		        	scrollTop: $("#resume").offset().top -50
 		    	}, 300);
 			}
-			 
-			
 		}
 	},
 };
