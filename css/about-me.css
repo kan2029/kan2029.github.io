@@ -12,6 +12,12 @@ h1{
 .hidden-div{
 	display: none;
 }
+.my-image-wrapper{
+	width: 100%;
+}
+.my-image{
+	max-width: 100%;
+}
 .loader-img-wrapper{
 	width: 200px;
 	left: 50%;
@@ -117,6 +123,7 @@ h1{
 }
 .resume-img{
 	border-radius: 200px;
+	max-width: 100%;
 }
 .resume-basic-info, .resume-skills-section,
 .resume-education-section, .resume-work-exp-section,
@@ -130,7 +137,7 @@ h1{
 .resume-basic-info h1{
 	margin: 0px;
 }
-.resume-accomplishments-section, .resumr-certifications-section{
+.resume-accomplishments-section, .resume-certifications-section{
 	padding-bottom: 50px;
 }
 
@@ -240,4 +247,96 @@ h1{
 .accomplishment-img-wrapper, .certification-img-wrapper{
 	padding-left:0px;
 	margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+	.resume-basic-info h1{
+		font-size: 200%;
+	}
+	.social-links{
+		top: 0px;		
+	}
+	.resume-skills-section .skill-img-wrapper, .resume-skills-section .text-content{
+		width: 60px;
+		height: 60px;
+	}
+	.resume-accomplishments-section .resume-accomplishments{
+		top: 0px;
+	}
+	.resume-accomplishments-section{
+		padding-bottom: 0px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.container {
+    	padding-top: 15px;
+	}
+	#main-content{
+		padding: 10px;
+	}
+	.link{
+		min-height: 100px;
+	}
+	.link-caption-text h3{
+		font-size: 16px;
+	}
+	.link-caption-hidden{
+		padding: 10px;
+	}
+	.link-caption-hidden span {
+	    font-size: 15px;
+	}
+	.link-caption{
+		top: 71px;
+	}
+	.link-hover:hover .link-caption{
+		/*opacity: 1;*/
+		transform: translateY(-71px);
+		-webkit-transform:translateY(-71px);
+		-moz-transform:translateY(-71px);
+		-ms-transform:translateY(-71px);
+		-o-transform:translateY(-71px);
+	}
+	.link-caption-hidden{
+		height: 71px;
+	}
+	.resume-img-wrapper{
+		max-width: 80%;
+		margin-bottom: 8px;
+	}
+	.resume-img{
+		position: relative;
+	    left: 50%;
+	    margin-left: -38%;
+	}
+	.float-right{
+		float: none;
+	}
+	.resume-intro small{
+		font-size: 55%;
+	}
+	.resume-intro h1{
+		margin: -10px;
+	}
+	.social-link-img{
+		max-width: 30px;
+	}
+	.social-links{
+		top: 0px;
+	}
+	.resume-name{
+		font-size: 30px;
+		margin-top: 5px !important;
+	}
+	#resume{
+		padding: 30px;
+	}
+	.resume-intro{
+		text-align: center;
+	}
+	.background{
+		background-image: none;
+	}
+
 }
