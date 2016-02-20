@@ -22,7 +22,7 @@ h1{
 	width: 200px;
 	left: 50%;
 	top:50%;
-	position:absolute;
+	position: absolute;
 	margin-left: -100px;
 	margin-top: -75px;
 }
@@ -99,6 +99,7 @@ h1{
 	transition:all 0.3s ease-in-out;
 	width: 100%;
 }
+
 .link-hover{
 	cursor: pointer;
 }
@@ -338,5 +339,22 @@ h1{
 	.background{
 		background-image: none;
 	}
-
+	.resume-section h1{
+		text-align: center;
+	}
+	.resume-skills-wrapper{
+		padding: 0px;
+	}
+	.skill-img-wrapper{
+		width: 50px;
+    	height: 50px;
+	}
+	.skill-img-wrapper .text-content{
+		width: 50px;
+    	height: 50px;	
+    	padding: 15px 0px;
+	}
+	.skill-img-wrapper .text-content span{
+		font-size: 10px;
+	}
 }
