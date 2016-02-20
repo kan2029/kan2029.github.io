@@ -144,11 +144,74 @@ var karan = {
 	},
 	viewBasicInfo: {
 		init: function(){
+			var loaderImg = '<section class="loader-img-wrapper"><img class="loader-img" src="img/progress.gif"></section>';
+			$('body').prepend(loaderImg);
+			setTimeout(function(){
+				$('.loader-img-wrapper').fadeOut();
+			},2000);
+			setTimeout(function(){
+				karan.viewBasicInfo.initBackground();
+			},2300);
+			setTimeout(function(){
+				karan.viewBasicInfo.initLinks();
+			},2500);
+
+		},
+
+		initBackground: function(){
+			$('body').addClass('background');
+		},
+
+		initLinks: function(){
+			$('.container').removeClass('hidden');
 			this.basicInfo = karan.controller.getBasicInfo();
 			$('.my-image').eq(0).attr('src', this.basicInfo.imageUrl);
-			//init name
-			//init summary
-		}
+			$({top: -2000}).animate({top: 0}, {
+			    duration: 1000,
+			    easing: 'easeOutSine',
+			    step: function() {
+			        $('#main-content').css('top', this.top);
+			    }
+			});	
+
+			setTimeout(function(){
+				$({top: 3000}).animate({top: 0}, {
+				    duration: 1000,
+				    easing: 'easeOutSine',
+				    step: function() {
+				        $('#link1').css('top', this.top);
+				    }
+				});	
+			}, 100);
+			setTimeout(function(){
+				$({top: 3000}).animate({top: 0}, {
+				    duration: 1000,
+				    easing: 'easeOutSine',
+				    step: function() {
+				        $('#link2').css('top', this.top);
+				    }
+				});	
+			}, 200);
+			setTimeout(function(){
+				$({top: 3000}).animate({top: 0}, {
+				    duration: 1000,
+				    easing: 'easeOutSine',
+				    step: function() {
+				        $('#link3').css('top', this.top);
+				    }
+				});	
+			}, 300);
+			setTimeout(function(){
+				$({top: 3000}).animate({top: 0}, {
+				    duration: 1000,
+				    easing: 'easeOutSine',
+				    step: function() {
+				        $('#link4').css('top', this.top);
+				    }
+				});	
+			}, 400);
+		},
+
 	},
 	viewResume: {
 		initResume: function(){
@@ -158,9 +221,9 @@ var karan = {
 				$('html, body').animate({
 		        	scrollTop: $("#resume").offset().top -50
 		    	}, 300);
-				setTimeout(function(){
-					$('#resume').animate({left: '0px'});	
-				}, 300);				
+					
+
+							
 
 				this.resume = karan.controller.getResume();
 				$('.resume-img').attr('src', this.resume.imageUrl);
@@ -209,12 +272,25 @@ var karan = {
 										'<p>'+this.resume.accomplishments[acc].description+'</p></div><br>';	
 					$('.resume-accomplishments').append(thisAccomplishment);
 				}
+				setTimeout(function(){
+					$({count: 2000}).animate({count: 0}, {
+					    duration: 1000,
+					    easing: 'easeOutBack',
+					    step: function() {
+					        $('#resume').css('left', this.count);
+					    }
+					});	
+				}, 300);
+
+
 			}
 			else{
 				$('html, body').animate({
 		        	scrollTop: $("#resume").offset().top -50
 		    	}, 300);
 			}
+			 
+			
 		}
 	},
 };
