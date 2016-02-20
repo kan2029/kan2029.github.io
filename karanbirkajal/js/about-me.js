@@ -144,8 +144,9 @@ var karan = {
 	},
 	viewBasicInfo: {
 		init: function(){
-			var loaderImg = '<section class="loader-img-wrapper"><img class="loader-img" src="img/progress.gif"></section>';
+			var loaderImg = '<section class="loader-img-wrapper hidden-div"><img class="loader-img" src="img/progress.gif"></section>';
 			$('body').prepend(loaderImg);
+			$('.loader-img-wrapper').fadeIn(700);
 			setTimeout(function(){
 				$('.loader-img-wrapper').fadeOut();
 			},2000);
