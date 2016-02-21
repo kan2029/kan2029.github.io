@@ -342,9 +342,6 @@ h1{
 	.resume-section h1{
 		text-align: center;
 	}
-	.resume-skills-wrapper{
-		padding: 0px;
-	}
 	.skill-img-wrapper{
 		width: 50px;
     	height: 50px;
@@ -356,5 +353,33 @@ h1{
 	}
 	.skill-img-wrapper .text-content span{
 		font-size: 10px;
+	}
+	.resume-education h3, .work-exp h3, .resume-accomplishments h3{
+		font-size: 21px;
+	}
+	.resume-education h4, .work-exp h4{
+		font-size: 17px;
+	}
+	.education, .work-exp, .resume-certifications-section{
+		text-align: center;
+	}
+	.education-insti-logo, .work-company-logo{
+		position: relative;
+	}
+	.education-insti-logo{
+		margin: 8px 0px;
+	}
+	.resume-skills-section, .resume-education-section, .resume-work-exp-section, .resume-accomplishments-section, .resume-certifications-section{
+		padding: 0px;
+	}
+	.resume-accomplishments{
+		top: 0px;
+		text-align: center;
+	}
+	.accomplishment-img-wrapper, .certification-img-wrapper{
+		padding: 0px;
+	}
+	.resume-skills-wrapper{
+		padding: 0px 30px 12px 30px;
 	}
 }

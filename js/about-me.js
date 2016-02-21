@@ -90,7 +90,7 @@ var karan = {
 					logo: 'img/cf.png',
 					period: 'Apr 2015 - Present',
 					description: '- Worked on various projects involving HTML, CSS, JavaScript, JQuery, Bootstrap, React, PHP, MySQL<br>'+ 
-								'- Developed tools for brokers/builders and internal service delivery team to post listing/project details'+
+								'- Developed tools for brokers, builders and internal service delivery team to post listing/project details'+
 								'- Worked on advertisements for our homepage<br>'+
 								'- Worked on some features of live-in tour (360 degree views) for mobile devices<br>'+
 								'- Have experience in responsive web design and handling different mobile devices'
@@ -264,8 +264,9 @@ var karan = {
 						var thisEducation = '<div class="education"><h3>'+this.resume.education[edu].degree+'</h3>'+
 											'<h4>'+this.resume.education[edu].institution+'</h4>'+
 											'<h4><small>'+this.resume.education[edu].period+'</small></h4>'+
+											'<img class="education-insti-logo" src="'+this.resume.education[edu].logo+'">'+
 											'<p>'+this.resume.education[edu].description+'</p>'+
-											'<img class="education-insti-logo" src="'+this.resume.education[edu].logo+'"></div><br>';	
+											'</div><br>';	
 						$('.resume-education').append(thisEducation);	
 					}
 
@@ -274,8 +275,9 @@ var karan = {
 						var thisExperience = '<div class="work-exp"><h3>'+this.resume.workExperience[exp].position+'</h3>'+
 											'<h4>'+this.resume.workExperience[exp].company+'</h4>'+
 											'<h4><small>'+this.resume.workExperience[exp].period+'</small></h4>'+
+											'<img class="work-company-logo" src="'+this.resume.workExperience[exp].logo+'">'+
 											'<p>'+this.resume.workExperience[exp].description+'</p>'+
-											'<img class="work-company-logo" src="'+this.resume.workExperience[exp].logo+'"></div><br>';	
+											'</div><br>';	
 						$('.resume-work-exp').append(thisExperience);
 					}
 					
