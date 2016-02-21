@@ -171,50 +171,60 @@ var karan = {
 			$('.container').removeClass('hidden');
 			this.basicInfo = karan.controller.getBasicInfo();
 			/*$('.my-image').eq(0).attr('src', this.basicInfo.imageUrl);*/
-			$({top: -2000}).animate({top: 0}, {
-			    duration: 1000,
-			    easing: 'easeOutSine',
-			    step: function() {
-			        $('#main-content').css('top', this.top);
-			    }
-			});	
+			
+			if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
 
-			setTimeout(function(){
-				$({top: 3000}).animate({top: 0}, {
+				$({top: -2000}).animate({top: 0}, {
 				    duration: 1000,
 				    easing: 'easeOutSine',
 				    step: function() {
-				        $('#link1').css('top', this.top);
+				        $('#main-content').css('top', this.top);
 				    }
 				});	
-			}, 100);
-			setTimeout(function(){
-				$({top: 3000}).animate({top: 0}, {
-				    duration: 1000,
-				    easing: 'easeOutSine',
-				    step: function() {
-				        $('#link2').css('top', this.top);
-				    }
-				});	
-			}, 200);
-			setTimeout(function(){
-				$({top: 3000}).animate({top: 0}, {
-				    duration: 1000,
-				    easing: 'easeOutSine',
-				    step: function() {
-				        $('#link3').css('top', this.top);
-				    }
-				});	
-			}, 300);
-			setTimeout(function(){
-				$({top: 3000}).animate({top: 0}, {
-				    duration: 1000,
-				    easing: 'easeOutSine',
-				    step: function() {
-				        $('#link4').css('top', this.top);
-				    }
-				});	
-			}, 400);
+				setTimeout(function(){
+					$({top: 3000}).animate({top: 0}, {
+					    duration: 1000,
+					    easing: 'easeOutSine',
+					    step: function() {
+					        $('#link1').css('top', this.top);
+					    }
+					});	
+				}, 100);
+				setTimeout(function(){
+					$({top: 3000}).animate({top: 0}, {
+					    duration: 1000,
+					    easing: 'easeOutSine',
+					    step: function() {
+					        $('#link2').css('top', this.top);
+					    }
+					});	
+				}, 200);
+				setTimeout(function(){
+					$({top: 3000}).animate({top: 0}, {
+					    duration: 1000,
+					    easing: 'easeOutSine',
+					    step: function() {
+					        $('#link3').css('top', this.top);
+					    }
+					});	
+				}, 300);
+				setTimeout(function(){
+					$({top: 3000}).animate({top: 0}, {
+					    duration: 1000,
+					    easing: 'easeOutSine',
+					    step: function() {
+					        $('#link4').css('top', this.top);
+					    }
+					});	
+				}, 400);
+			}
+			else{
+				$('#main-content').css('top', 0);
+				$('#link1').css('top', 0);
+				$('#link2').css('top', 0);
+				$('#link3').css('top', 0);
+				$('#link4').css('top', 0);
+			}
 		},
 
 	},
