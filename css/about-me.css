@@ -425,9 +425,16 @@ h1{
 		padding: 0px 30px 12px 30px;
 	}
 	.my-image{
+		width: 200px;
 		position: relative;
 	    left: 50%;
-	    margin-left: -152px;
+	    margin-left: -100px;
+	}
+	.main-intro h1{
+		font-size: 35px;
+	}
+	.traits-ul{
+		font-size: 20px;
 	}
 
 }
