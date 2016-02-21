@@ -58,18 +58,22 @@ h1{
 	padding: 0px;
 	top: 3000px;
 }
-/*#link1{
-	background-image: url(../img/me.png);
+#link1{
+	/*background-image: url(../img/me.png);*/
+	background-color: rgba(222, 184, 117, 0.41);
 }
 #link2{
-	background-image: url(../img/resume-sample.jpg);
+	/*background-image: url(../img/resume-sample.jpg);*/
+	background-color: rgba(104,150,222,0.37);
 }
 #link3{
-	background-image: url(../img/project-sample.jpg);
+	/*background-image: url(../img/project-sample.jpg);*/
+	background-color: rgba(237,130,130,0.28);
 }
 #link4{
-	background-image: url(../img/music-sample.jpg);
-}*/
+	/*background-image: url(../img/music-sample.jpg);*/
+	background-color: rgba(112,181,181,.3);
+}
 .link-caption1{
 	background-color: rgba(204, 136, 13, 0.55);
 }
