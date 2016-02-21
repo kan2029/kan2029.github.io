@@ -221,11 +221,11 @@ var karan = {
 	viewResume: {
 		initResume: function(){
 			if($('#resume').hasClass('hidden')){
-				$('#resume').css('left', '3000px');
+				$('#resume').css('opacity', 0);
 				$('#resume').removeClass('hidden');
 				$('html, body').animate({
 		        	scrollTop: $("#resume").offset().top -50
-		    	}, 300);
+		    	}, 500);
 					
 
 							
@@ -287,19 +287,19 @@ var karan = {
 				}
 
 				setTimeout(function(){
-					$({count: 2000}).animate({count: 0}, {
-					    duration: 1000,
+					$({count: 0}).animate({count: 1}, {
+					    duration: 2000,
 					    easing: 'easeOutBack',
 					    step: function() {
-					        $('#resume').css('left', this.count);
+					        $('#resume').css('opacity', this.count);
 					    }
 					});	
-				}, 300);
+				}, 500);
 			}
 			else{
 				$('html, body').animate({
 		        	scrollTop: $("#resume").offset().top -50
-		    	}, 300);
+		    	}, 500);
 			}
 		}
 	},
