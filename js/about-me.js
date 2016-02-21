@@ -3,14 +3,14 @@ var karan = {
 		basicInfo: {
 			name: 'Karanbir Kajal',
 			summary: '',
-			imageUrl: 'img/my-picture.gif'
+			imageUrl: ''
 		},
 		resume: {
 			name: 'Karanbir Kajal',
 			place: 'Bangalore, Karnataka',
 			email: 'karanbir.kajal@gmail.com',
 			mobile: '+91-9972241602',
-			imageUrl: 'img/resume-my-picture.jpg',
+			imageUrl: '',
 			socialLinks: [
 				{
 					img: 'img/linkedin.png',
@@ -170,7 +170,7 @@ var karan = {
 		initLinks: function(){
 			$('.container').removeClass('hidden');
 			this.basicInfo = karan.controller.getBasicInfo();
-			$('.my-image').eq(0).attr('src', this.basicInfo.imageUrl);
+			/*$('.my-image').eq(0).attr('src', this.basicInfo.imageUrl);*/
 			$({top: -2000}).animate({top: 0}, {
 			    duration: 1000,
 			    easing: 'easeOutSine',
@@ -231,7 +231,7 @@ var karan = {
 							
 
 				this.resume = karan.controller.getResume();
-				$('.resume-img').attr('src', this.resume.imageUrl);
+				/*$('.resume-img').attr('src', this.resume.imageUrl);*/
 				$('.resume-name').html(this.resume.name);
 				$('.resume-place').html(this.resume.place);
 				$('.resume-email').html(this.resume.email);
