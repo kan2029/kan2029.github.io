@@ -47,7 +47,7 @@ var karan = {
 					label: 'Javascript'
 				},
 				{
-					imgUrl: 'img/jquery.jpg',
+					imgUrl: 'img/jquery.png',
 					label: 'JQuery'
 				},
 				{
@@ -73,14 +73,14 @@ var karan = {
 					institution: 'Spring Dale Senior School, Amritsar, Punjab',
 					period: '2009',
 					description: 'All India Senior School Certificate Exam (Class 12th) conducted by CBSE with a percentage score of 87.8%',
-					logo: 'img/sdss.gif'
+					logo: 'img/sdss.png'
 				},
 				{
 					degree: 'AISSE',
 					institution: 'Spring Dale Senior School, Amritsar, Punjab',
 					period: '2007',
 					description: 'All India Secondary School Examination (Class 10th) conducted by CBSE with a percentage score of 89.4%',
-					logo: 'img/sdss.gif'
+					logo: 'img/sdss.png'
 				}
 			],
 			workExperience:[
@@ -99,7 +99,7 @@ var karan = {
 				{
 					position: 'Manager',
 					company: 'Tata Motors, Pune',
-					logo: 'img/tml.gif',
+					logo: 'img/tml.png',
 					period: 'Aug 2014 - Mar 2015',
 					description: "- Was actively involved in dealing with an engineering counterpart and designing product release requirements for 'in-vehicle' apps<br>"+
 					"- Designing these apps was in light with Tata Motor's 'HorizonNext' strategy."
@@ -225,70 +225,70 @@ var karan = {
 				$('#resume').removeClass('hidden');
 				$('html, body').animate({
 		        	scrollTop: $("#resume").offset().top -50
-		    	}, 500);
+		    	}, 300);
+									
+				setTimeout(function(){
+
+					this.resume = karan.controller.getResume();
+					/*$('.resume-img').attr('src', this.resume.imageUrl);*/
+					$('.resume-name').html(this.resume.name);
+					$('.resume-place').html(this.resume.place);
+					$('.resume-email').html(this.resume.email);
+					$('.resume-mobile').html(this.resume.mobile);
+
+					for(socialLink in this.resume.socialLinks){
+						$('.social-links').eq(0).append('<a href="'+this.resume.socialLinks[socialLink].link+'" target="_blank"><img src="'+this.resume.socialLinks[socialLink].img+'" class="social-link-img"></a>')
+					}
+
+					$('.resume-skills-section').find('h1').eq(0).html('Skills');
+					for(var skill in this.resume.skills){
+						var thisSkill = '<section class="skill-img-wrapper">'+
+										'<img class="skill-img" src="'+this.resume.skills[skill].imgUrl+'" alt="'+this.resume.skills[skill].label+'">'+
+										'<span class="text-content"><span>'+this.resume.skills[skill].label+'</span></span>'+
+										'</section>';
+						$('.resume-skills').append(thisSkill);
+					}
+
+					$('.resume-education-section').find('h1').eq(0).html('Education');
+					for(var edu in this.resume.education){
+						var thisEducation = '<div class="education"><h3>'+this.resume.education[edu].degree+'</h3>'+
+											'<h4>'+this.resume.education[edu].institution+'</h4>'+
+											'<h4><small>'+this.resume.education[edu].period+'</small></h4>'+
+											'<p>'+this.resume.education[edu].description+'</p>'+
+											'<img class="education-insti-logo" src="'+this.resume.education[edu].logo+'"></div><br>';	
+						$('.resume-education').append(thisEducation);	
+					}
+
+					$('.resume-work-exp-section').find('h1').eq(0).html('Work Experience');
+					for(var exp in this.resume.workExperience){
+						var thisExperience = '<div class="work-exp"><h3>'+this.resume.workExperience[exp].position+'</h3>'+
+											'<h4>'+this.resume.workExperience[exp].company+'</h4>'+
+											'<h4><small>'+this.resume.workExperience[exp].period+'</small></h4>'+
+											'<p>'+this.resume.workExperience[exp].description+'</p>'+
+											'<img class="work-company-logo" src="'+this.resume.workExperience[exp].logo+'"></div><br>';	
+						$('.resume-work-exp').append(thisExperience);
+					}
 					
+					$('.resume-accomplishments-section').find('h1').eq(0).html('Accomplishments');
+					for(var acc in this.resume.accomplishments){
+						var thisAccomplishment = '<div class="accomplishment"><h3>'+this.resume.accomplishments[acc].title+'</h3>'+
+											'<section class="col-xs-12 accomplishment-img-wrapper"><img class="accomplishment-img" src="'+this.resume.accomplishments[acc].imgSrc+'"></section>'+
+											'<p>'+this.resume.accomplishments[acc].description+'</p></div><br>';	
+						$('.resume-accomplishments').append(thisAccomplishment);
+					}
 
-							
-
-				this.resume = karan.controller.getResume();
-				/*$('.resume-img').attr('src', this.resume.imageUrl);*/
-				$('.resume-name').html(this.resume.name);
-				$('.resume-place').html(this.resume.place);
-				$('.resume-email').html(this.resume.email);
-				$('.resume-mobile').html(this.resume.mobile);
-
-				for(socialLink in this.resume.socialLinks){
-					$('.social-links').eq(0).append('<a href="'+this.resume.socialLinks[socialLink].link+'" target="_blank"><img src="'+this.resume.socialLinks[socialLink].img+'" class="social-link-img"></a>')
-				}
-
-				$('.resume-skills-section').find('h1').eq(0).html('Skills');
-				for(var skill in this.resume.skills){
-					var thisSkill = '<section class="skill-img-wrapper">'+
-									'<img class="skill-img" src="'+this.resume.skills[skill].imgUrl+'" alt="'+this.resume.skills[skill].label+'">'+
-									'<span class="text-content"><span>'+this.resume.skills[skill].label+'</span></span>'+
-									'</section>';
-					$('.resume-skills').append(thisSkill);
-				}
-
-				$('.resume-education-section').find('h1').eq(0).html('Education');
-				for(var edu in this.resume.education){
-					var thisEducation = '<div class="education"><h3>'+this.resume.education[edu].degree+'</h3>'+
-										'<h4>'+this.resume.education[edu].institution+'</h4>'+
-										'<h4><small>'+this.resume.education[edu].period+'</small></h4>'+
-										'<p>'+this.resume.education[edu].description+'</p>'+
-										'<img class="education-insti-logo" src="'+this.resume.education[edu].logo+'"></div><br>';	
-					$('.resume-education').append(thisEducation);	
-				}
-
-				$('.resume-work-exp-section').find('h1').eq(0).html('Work Experience');
-				for(var exp in this.resume.workExperience){
-					var thisExperience = '<div class="work-exp"><h3>'+this.resume.workExperience[exp].position+'</h3>'+
-										'<h4>'+this.resume.workExperience[exp].company+'</h4>'+
-										'<h4><small>'+this.resume.workExperience[exp].period+'</small></h4>'+
-										'<p>'+this.resume.workExperience[exp].description+'</p>'+
-										'<img class="work-company-logo" src="'+this.resume.workExperience[exp].logo+'"></div><br>';	
-					$('.resume-work-exp').append(thisExperience);
-				}
-				
-				$('.resume-accomplishments-section').find('h1').eq(0).html('Accomplishments');
-				for(var acc in this.resume.accomplishments){
-					var thisAccomplishment = '<div class="accomplishment"><h3>'+this.resume.accomplishments[acc].title+'</h3>'+
-										'<section class="col-xs-12 accomplishment-img-wrapper"><img class="accomplishment-img" src="'+this.resume.accomplishments[acc].imgSrc+'"></section>'+
-										'<p>'+this.resume.accomplishments[acc].description+'</p></div><br>';	
-					$('.resume-accomplishments').append(thisAccomplishment);
-				}
-
-				$('.resume-certifications-section').find('h1').eq(0).html('Certifications');
-				for(var certi in this.resume.certifications){
-					var thisCertification = '<div class="certification">'+
-										'<section class="col-xs-12 certification-img-wrapper"><img class="certification-img" src="'+this.resume.certifications[certi].imgSrc+'"></section>'+
-										'</div><br>';	
-					$('.resume-certifications').append(thisCertification);
-				}
+					$('.resume-certifications-section').find('h1').eq(0).html('Certifications');
+					for(var certi in this.resume.certifications){
+						var thisCertification = '<div class="certification">'+
+											'<section class="col-xs-12 certification-img-wrapper"><img class="certification-img" src="'+this.resume.certifications[certi].imgSrc+'"></section>'+
+											'</div><br>';	
+						$('.resume-certifications').append(thisCertification);
+					}
+				}, 400);
 
 				setTimeout(function(){
 					$({count: 0}).animate({count: 1}, {
-					    duration: 2000,
+					    duration: 1500,
 					    easing: 'easeOutBack',
 					    step: function() {
 					        $('#resume').css('opacity', this.count);
@@ -299,7 +299,7 @@ var karan = {
 			else{
 				$('html, body').animate({
 		        	scrollTop: $("#resume").offset().top -50
-		    	}, 500);
+		    	}, 300);
 			}
 		}
 	},
