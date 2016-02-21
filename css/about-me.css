@@ -9,6 +9,42 @@
 h1{
 	font-size: 32px;
 }
+.contacts-ul, .traits-ul{
+	list-style-type: none;
+	padding: 0;
+	font-size: 25px;
+	letter-spacing: 3px;
+	color: rgba(119, 119, 119, 0.59);
+}
+.main-intro h1{
+	font-size: 55px;
+	letter-spacing: 3px;
+	color: rgba(119, 119, 119, 0.87);
+}
+.contacts-li{
+	display: inline-block;
+	margin-right: 8px;
+	-webkit-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+.contacts-li:hover{
+	cursor: pointer;
+	transform: translateY(-5px);
+	-webkit-transform:translateY(-5px);
+	-moz-transform:translateY(-5px);
+	-ms-transform:translateY(-5px);
+	-o-transform:translateY(-5px);
+}
+.contacts-li-img-wrapper{
+	display: inline-block;
+	width: 40px;
+}
+.contacts-li-img{
+	max-width: 100%;
+}
 .hidden-div{
 	display: none;
 }
@@ -17,6 +53,8 @@ h1{
 }
 .my-image{
 	max-width: 100%;
+	border-radius: 200px;
+	border: 2px solid #f4f4f4;
 }
 .loader-img-wrapper{
 	width: 200px;
@@ -278,7 +316,7 @@ h1{
     	padding-top: 15px;
 	}
 	#main-content{
-		padding: 10px;
+		padding: 30px;
 	}
 	.link{
 		min-height: 100px;
@@ -364,7 +402,7 @@ h1{
 	.resume-education h4, .work-exp h4{
 		font-size: 17px;
 	}
-	.education, .work-exp, .resume-certifications-section{
+	.education, .work-exp, .resume-certifications-section, .main-intro{
 		text-align: center;
 	}
 	.education-insti-logo, .work-company-logo{
@@ -386,4 +424,10 @@ h1{
 	.resume-skills-wrapper{
 		padding: 0px 30px 12px 30px;
 	}
+	.my-image{
+		position: relative;
+	    left: 50%;
+	    margin-left: -152px;
+	}
+
 }

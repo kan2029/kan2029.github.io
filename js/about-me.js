@@ -2,8 +2,8 @@ var karan = {
 	model: {
 		basicInfo: {
 			name: 'Karanbir Kajal',
-			summary: '',
-			imageUrl: ''
+			traits: ['Web Developer', 'Musician', 'Foodie'],
+			contacts: ['img/linkedin-contact.png', 'img/github-contact.png', 'img/youtube-contact.png', 'img/fb-contact.png', 'img/google-contact.png'],
 		},
 		resume: {
 			name: 'Karanbir Kajal',
@@ -170,7 +170,13 @@ var karan = {
 		initLinks: function(){
 			$('.container').removeClass('hidden');
 			this.basicInfo = karan.controller.getBasicInfo();
-			/*$('.my-image').eq(0).attr('src', this.basicInfo.imageUrl);*/
+			$('.main-intro').prepend('<h1>'+this.basicInfo.name+'</h1><hr>');
+			for(trait in this.basicInfo.traits){
+				$('.traits-ul').append('<li class="traits-li">'+this.basicInfo.traits[trait]+'</li>');
+			}
+			for(contact in this.basicInfo.contacts){
+				$('.contacts-ul').append('<li class="contacts-li"><section class="contacts-li-img-wrapper"><img src="'+this.basicInfo.contacts[contact]+'" class="contacts-li-img"></section></li>');
+			}
 			
 			if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
 
