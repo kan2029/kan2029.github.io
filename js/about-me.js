@@ -3,6 +3,7 @@ var karan = {
 		basicInfo: {
 			name: 'Karanbir Kajal',
 			traits: ['Web Developer', 'Musician', 'Foodie'],
+			imgSrc: 'img/my-picture.gif',
 			contacts: ['img/linkedin-contact.png', 'img/github-contact.png', 'img/youtube-contact.png', 'img/fb-contact.png', 'img/google-contact.png'],
 		},
 		resume: {
@@ -10,7 +11,7 @@ var karan = {
 			place: 'Bangalore, Karnataka',
 			email: 'karanbir.kajal@gmail.com',
 			mobile: '+91-9972241602',
-			imageUrl: '',
+			imageUrl: 'img/resume-my-picture.jpg',
 			socialLinks: [
 				{
 					img: 'img/linkedin.png',
@@ -170,6 +171,7 @@ var karan = {
 		initLinks: function(){
 			$('.container').removeClass('hidden');
 			this.basicInfo = karan.controller.getBasicInfo();
+			$('.my-image').attr('src', 'img/my-picture.gif');
 			$('.main-intro').prepend('<h1>'+this.basicInfo.name+'</h1><hr>');
 			for(trait in this.basicInfo.traits){
 				$('.traits-ul').append('<li class="traits-li">'+this.basicInfo.traits[trait]+'</li>');
@@ -246,7 +248,7 @@ var karan = {
 				setTimeout(function(){
 
 					this.resume = karan.controller.getResume();
-					/*$('.resume-img').attr('src', this.resume.imageUrl);*/
+					$('.resume-img').attr('src', this.resume.imageUrl);
 					$('.resume-name').html(this.resume.name);
 					$('.resume-place').html(this.resume.place);
 					$('.resume-email').html(this.resume.email);
