@@ -302,6 +302,52 @@ h1{
 	font-size: 34px;
 }
 
+#navigation-bar{
+	list-style-type: none;
+	padding: 0px;
+	position: fixed;
+	z-index: 1;
+	opacity: 0;
+	width: 1140px;
+	text-align: center;
+	top: 0px;
+	cursor: pointer;
+}
+
+#navigation-bar .nav-li{
+	padding: 0px 0px;
+	border-radius: 0px 0px 6px 6px;
+	font-size: 24px;
+	color: white;
+	opacity: 0.3;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+	-ms-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out;
+}
+#navigation-bar .nav-li:hover{
+	opacity: 0.9;
+}
+#navigation-bar .about-me-link{
+	background-color: rgb(218, 173, 93);
+}
+#navigation-bar .resume-link{
+	background-color: rgb(86, 138, 219);
+}
+#navigation-bar .projects-link{
+	background-color: rgb(236, 113, 113);
+}
+#navigation-bar .music-link{
+	background-color: rgb(94, 172, 172);
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+	#navigation-bar{
+		width: 940px;
+	}
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px){
 	.resume-basic-info h1{
 		font-size: 200%;
@@ -319,6 +365,14 @@ h1{
 	.resume-accomplishments-section{
 		padding-bottom: 0px;
 	}
+	#navigation-bar{
+		width: 720px;
+	}
+	#navigation-bar	.nav-li{
+		padding: 3px 0px;
+		font-size: 18px;
+	}
+
 }
 
 @media only screen and (max-width: 767px){
@@ -454,6 +508,13 @@ h1{
 	}
 	.project-title h3{
 		text-align: center;
+	}
+	#navigation-bar{
+		width: 726px;
+	}
+	#navigation-bar	.nav-li{
+		padding: 3px 0px;
+		font-size: 18px;
 	}
 
 }

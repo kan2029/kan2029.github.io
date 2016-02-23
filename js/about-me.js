@@ -16,7 +16,25 @@ karan.controller = {
 		},
 		initProjects: function(){
 			karan.viewProjects.initProjects();
-		}
+		},
+		highlightLinkOnScroll: function(section){
+			var sectionOffsetTop = $('#'+section).offset().top;
+			var currentOffsetMiddle = $(window).scrollTop()+150;
+			var sectionHeight = Number($('#'+section).css('height').slice(0,4));
+			
+			if(currentOffsetMiddle > sectionOffsetTop && currentOffsetMiddle < (sectionOffsetTop+sectionHeight) && $('.'+section+'-link').css('opacity') == 0.3){	
+				$('.nav-li').css('opacity', 0.3);	
+				setTimeout(function(){
+					$({count: 0.3}).animate({count: 1}, {
+					    duration: 500,
+					    easing: 'easeOutBack',
+					    step: function() {
+					        $('.'+section+'-link').css('opacity', this.count);
+					    }
+					});	
+				}, 30);
+			}
+		},
 	};
 
 	karan.viewBasicInfo = {
@@ -243,4 +261,35 @@ karan.controller = {
 
 $(document).ready(function(){
 	karan.controller.init();
+	$(window).scroll(function(){
+		//to toggle navigation bar
+		var linksOffsetTop = $('#links').offset().top;
+		var linksHeight = Number($('#links').css('height').slice(0,3));
+		if($(window).scrollTop() > linksOffsetTop + linksHeight){
+			if($('#navigation-bar').css('opacity') == 0){
+				$({count: 0}).animate({count: 1}, {
+				    duration: 1000,
+				    easing: 'easeOutBack',
+				    step: function() {
+				        $('#navigation-bar').css('opacity', this.count);
+				    }
+				});	
+			}
+			//to highlight specific nav-li	
+			karan.controller.highlightLinkOnScroll('resume');
+			karan.controller.highlightLinkOnScroll('projects');	
+		}
+		else{
+			if($('#navigation-bar').css('opacity') == 1){
+				$({count: 1}).animate({count: 0}, {
+				    duration: 1000,
+				    easing: 'easeOutBack',
+				    step: function() {
+				        $('#navigation-bar').css('opacity', this.count);
+				    }
+				});	
+			}
+				
+		}
+	});
 });
