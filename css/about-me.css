@@ -510,11 +510,8 @@ h1{
 		text-align: center;
 	}
 	#navigation-bar{
-		width: 726px;
-	}
-	#navigation-bar	.nav-li{
-		padding: 3px 0px;
-		font-size: 18px;
+		display: none;
+		opacity: 0;
 	}
 
 }
