@@ -8,6 +8,7 @@
 </head>
 <body>
 	<article class="container hidden">
+		<!-- main content starts -->
 		<section id="main-content">
 			<section class="row">
 				<section class="col-xs-12 col-sm-4 col-md-5">
@@ -23,6 +24,9 @@
 				</section>
 			</section>	
 		</section>
+		<!-- main content ends -->
+
+		<!-- links start -->
 		<section class="row">
 			<section class="col-xs-6 col-md-3">
 				<section class="link link-hover" id="link1">
@@ -49,12 +53,12 @@
 				</section>
 			</section>
 			<section class="col-xs-6 col-md-3">
-				<section class="link link-hover" id="link3">
+				<section class="link link-hover" id="link3" onclick="karan.viewProjects.initProjects();">
 					<section class="link-caption link-caption3">
 						<section class="link-caption-text">
-							<h3>Projects</h3>
+							<h3>Mini Projects</h3>
 							<section class="link-caption-hidden link-caption-hidden-3">
-								<span>Page under construction ...</span>
+								<span>Click here to view my mini-projects</span>
 							</section>
 						</section>
 					</section>
@@ -73,7 +77,11 @@
 				</section>
 			</section>
 		</section>
+		<!-- links end -->
+
+		<!-- Resume starts -->
 		<section id="resume" class="hidden">
+			<h1  class="section-heading">Resume</h1>
 			<section class="row resume-basic-info resume-section">
 				<section class="col-xs-12 col-sm-4">
 					<section class="resume-img-wrapper">
@@ -134,6 +142,37 @@
 				</section>
 			</section>
 		</section>
+		<!-- Resume ends -->
+
+		<!-- Projects start -->
+		<section id="projects" class="hidden">
+			<h1 class="section-heading">Projects</h1>
+			<section class="row">
+				<section class="col-xs-12" id="projectList">
+					<section class="row project sample-project hidden project">
+						<section class="col-xs-12 col-md-6 project-image-section">
+							<section class="project-image-wrapper">
+								<img src="" class="project-image">
+							</section>
+						</section>
+						<section class="col-xs-12 col-md-6 project-details">
+							<span class="project-title"></span><br>
+							<span class="project-description"></span>
+							<label>Highlights: &nbsp;</label>
+							<ul class="project-highlights"></ul>
+							<span class="project-link"></span><br>
+							<span class="project-github"></span>
+						</section>
+					</section>
+
+				</section>
+			</section>
+		</section>
+		<!-- Projects end -->
+
+		
+		
+
 	</article>
 	<script src="js/jquery-min.js"></script>
 	<script src="js/jquery-easing.js"></script>

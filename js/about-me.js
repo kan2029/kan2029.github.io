@@ -11,6 +11,12 @@ karan.controller = {
 		initResume: function(){
 			karan.viewResume.initResume()
 		},
+		getProjects: function(){
+			return karan.model.miniProjects;
+		},
+		initProjects: function(){
+			karan.viewProjects.initProjects();
+		}
 	};
 
 	karan.viewBasicInfo = {
@@ -111,6 +117,7 @@ karan.controller = {
 				$('html, body').animate({
 		        	scrollTop: $("#resume").offset().top -50
 		    	}, 300);
+		    	console.log($("#resume").offset().top);
 									
 				setTimeout(function(){
 
@@ -190,7 +197,49 @@ karan.controller = {
 			}
 		}
 	};
-//};
+
+	karan.viewProjects = {
+		initProjects: function(){
+			if($('#projects').hasClass('hidden')){
+				$('#projects').css('opacity', 0);
+				$('#projects').removeClass('hidden');
+
+				setTimeout(function(){
+					this.projects = karan.controller.getProjects();
+					for(var project in this.projects.projects){
+						var projectSample = $('.sample-project').clone().removeClass('hidden').removeClass('sample-project');
+						projectSample.find('.project-image').attr('src', this.projects.projects[project].imageUrl);
+						projectSample.find('.project-title').html('<h3>'+this.projects.projects[project].title+'</h3>');
+						projectSample.find('.project-description').html('<p>'+this.projects.projects[project].description+'</p>');
+						projectSample.find('.project-link').html('<label>Link: &nbsp</label><a href="'+this.projects.projects[project].workingLink+'" target="_blank">'+this.projects.projects[project].title+'</a>');
+						projectSample.find('.project-github').html('<label>Github source: &nbsp</label><a href="'+this.projects.projects[project].gitHubSrc+'" target="_blank">'+this.projects.projects[project].gitHubSrc+'</a>');
+						for(var thisHighlight in this.projects.projects[project].highlights){
+							projectSample.find('.project-highlights').append('<li class="highlight">'+this.projects.projects[project].highlights[thisHighlight]+'</li>');
+						}
+
+						$('#projectList').append(projectSample);
+					}
+					$('html, body').animate({
+			        	scrollTop: $("#projects").offset().top -50
+			    	}, 400);
+				}, 10);
+				setTimeout(function(){
+					$({count: 0}).animate({count: 1}, {
+					    duration: 1500,
+					    easing: 'easeOutBack',
+					    step: function() {
+					        $('#projects').css('opacity', this.count);
+					    }
+					});	
+				}, 700);
+			}
+			else{
+				$('html, body').animate({
+		        	scrollTop: $("#projects").offset().top -50
+		    	}, 300);
+			}
+		},
+	};		
 
 $(document).ready(function(){
 	karan.controller.init();

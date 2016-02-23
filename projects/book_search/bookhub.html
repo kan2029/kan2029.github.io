@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BookHub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="bookhub.css" >
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container bookhub-container">
+
+      <div class="row">
+        <div class="panel panel-default"> 
+          <div class="panel-body">
+            <img id="bookhub-brand-img" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/book-128.png">
+            <span id="bookhub-brand-name">BookHub</span><span id="bookhub-brand-caption">searching books made easy!</span>
+            <ul id="bookhub-brand-info">
+              <li class="margin-right-15">Books <span id="total-books" class="badge">0</span></li>
+              <li>Bookmarks <span id="total-bookmarks" class="badge">0</span></li>
+            </ul>
+          </div>
+        </div>  
+      </div>
+      
+      <div class="row">
+        <div class="col-sm-5 col-md-4">
+          <input type="text" onkeyup="Bookhub.searchBooks(this);" class="form-control search-book" placeholder="Search (by name, author, rating) ">
+        </div>
+        <div class="col-sm-7 col-md-8">
+          <ul class="sort-ul">
+            <li onclick="Bookhub.sort(this, 'price-high');"><a>Price<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a></li>
+            <li onclick="Bookhub.sort(this, 'price-low');"><a>Price<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a></li>
+            <li onclick="Bookhub.sort(this, 'rating-high');"><a>Rating<span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a></li>
+            <li onclick="Bookhub.sort(this, 'rating-low');"><a>Rating<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a></li>
+            <li  id="add-bookmark" onclick="Bookhub.saveBookMark();">Bookmark<span class="glyphicon glyphicon-bookmark"></span></li>
+          </ul>
+        </div>           
+      </div>
+
+      <div class="row margin-top-20">
+        <div class="col-sm-6 col-md-7" id="book-list">
+          <img src="http://iamchriscollins.com/loading.gif" id="loading-on-load">
+          <img src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif">
+        </div>
+        <div class="col-sm-6 col-md-5" id="book-details">
+          <div class="panel panel-default hidden to-be-shown"> 
+            <div class="panel-body ">
+              <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                  <img id="book-image" src=""/>
+                </div>
+                <div class="col-sm-12 col-lg-6" id="book-details-brief">
+                  <div class="panel panel-default"> 
+                    <div class="panel-heading book-panel-heading">Details</div>
+                    <div class="panel-body">
+                      <div><span class="label-brief">Author:</span> <span id="book-author"></span></div>
+                      <div><span class="label-brief">Publisher:</span> <span id="book-publisher"></span></div>
+                      <div><span class="label-brief">ISBN:</span> <span id="book-isbn"></span></div>
+                      <div><span class="label-brief">Binding:</span> <span id="book-binding"></span></div>
+                      <div><span class="label-brief">Rating:</span> <span id="book-rating"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-default panel-description no-margin-top"> 
+                    <div class="panel-body">
+                      <span id="book-description"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+          <div class="to-be-hidden">
+            <div class="row">
+              <div class="col-md-12 text-align-center">
+                <span id="welcome-text"> Please select a book to view details and add bookmark... </span>
+                <img id="first-time-show" src="http://www.arabianbusiness.com/skins/ab.main/gfx/loading_spinner.gif" class="hidden">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="bookhub.js"></script>
+  </body>
+</html>

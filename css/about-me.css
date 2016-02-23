@@ -4,6 +4,7 @@
 	background-image: url(../img/background.png);
   	background-repeat:repeat; 	
   	background-attachment: fixed;
+  	padding-bottom: 20px;
 }
 
 h1{
@@ -78,18 +79,18 @@ h1{
 	position: relative;
 	overflow: hidden;
 }
-#main-content, #link1, #link2, #link3, #link4, #contacts, #resume{
+#main-content, #link1, #link2, #link3, #link4, #contacts, #resume, #projects{
 	background-color: #fff;
 	border-radius: 6px;
-	padding: 50px;
+	padding: 20px 50px 50px 50px;
 	box-shadow: 0px 3px 3px 0px #ddd;
 }
 #main-content{
 	top: -2000px;
 	position: relative;
 }
-#link1, #link2, #link3, #link4, #contacts, #resume{
-	margin-top: 20px;
+#link1, #link2, #link3, #link4, #contacts, #resume, #projects{
+	margin-top: 27px;
 	position: relative;
 }
 #link1, #link2, #link3, #link4{
@@ -170,7 +171,7 @@ h1{
 }
 .resume-basic-info, .resume-skills-section,
 .resume-education-section, .resume-work-exp-section,
-.resume-accomplishments-section, .resume-certifications-section{
+.resume-accomplishments-section, .resume-certifications-section, .project{
 	background-color: #eee;
 	border-radius: 6px;
 	margin-bottom: 20px;
@@ -290,6 +291,15 @@ h1{
 .accomplishment-img-wrapper, .certification-img-wrapper{
 	padding-left:0px;
 	margin-bottom: 10px;
+}
+.project-image{
+	max-width: 100%;
+	border: 10px solid white;
+    border-radius: 3px;
+}
+.section-heading{
+	text-align: center;
+	font-size: 34px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px){

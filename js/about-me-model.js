@@ -1,11 +1,14 @@
 karan = {};
+
 karan.model = {
+
 	basicInfo: {
 		name: 'Karanbir Kajal',
 		traits: ['Web Developer', 'Musician', 'Foodie'],
 		imgSrc: 'img/my-picture.gif',
 		contacts: ['img/linkedin-contact.png', 'img/github-contact.png', 'img/youtube-contact.png', 'img/fb-contact.png', 'img/google-contact.png'],
 	},
+
 	resume: {
 		name: 'Karanbir Kajal',
 		place: 'Bangalore, Karnataka',
@@ -60,7 +63,6 @@ karan.model = {
 				label: 'React'
 			}
 		],
-		//add github, linkedin etc
 		education: [
 			{
 				degree: 'Integrated Dual Degree (B.Tech + M.Tech)',
@@ -119,7 +121,7 @@ karan.model = {
 			},
 		],
 		certifications: [
-			{
+			{ //add more details
 				imgSrc: 'img/frontendNanodegree.jpg'
 			}
 		],
@@ -130,6 +132,35 @@ karan.model = {
 			{
 
 			}
+		]
+	},
+
+	miniProjects: {
+		projects: [
+			{
+				title: 'Book Search',
+				description: 'A simple book search feature was implemented as a part of Hackerearth challenge. The task was to look for books in an already provided API as the user types book name or author, and show its details. Sorting by price, rating was also implemented and the whole page was made responsive.',
+				imageUrl: 'img/book-search-img.png',
+				gitHubSrc: 'https://github.com/kan2029/hackerearth-book-search',
+				workingLink: 'projects/book_search/bookhub.html',
+				highlights: ['Responsive and Adaptive design']
+			},
+			{
+				title: 'Neighborhood Map',
+				description: "Location filter was implemented using javacript's 'Knockout' framework and Google maps. The task was to filter the list of locations as well as their corresponding markers on searching. Wikipedia API was also used to display information on user interaction",
+				imageUrl: 'img/neighborhood-map-img.png',
+				gitHubSrc: 'https://github.com/kan2029/frontend-nanodegree-neighborhood-map',
+				workingLink: 'projects/neighborhood_map/neighborhood_map.html',
+				highlights: ['Knockout framework', 'Google Map API', 'MediaWiki API']
+			},
+			{
+				title: 'Reach The River',
+				description: "A classic single-player arcade game was developed where the player has to cross the path full of bugs moving at different speeds and reach the river. The main focus of this project was to create efficient javascript objects (player, enemies) rather than game engine and HTML canvas. Concepts like javascrip prototypes, 'this' keyword, pseudoclassical subclasses, were implemented. Other features like collision handling, player boundaries, changeable character, winning streak were implemented too.",
+				imageUrl: 'img/reach-the-river-img.png',
+				gitHubSrc: 'https://github.com/kan2029/frontend-nanodegree-arcade-game',
+				workingLink: 'projects/reach_the_river/reach_the_river.html',
+				highlights: ['Object Oriented Javascript']
+			},
 		]
 	}
 }
