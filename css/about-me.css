@@ -327,7 +327,7 @@ h1{
 	transition:all 0.2s ease-in-out;
 }
 #navigation-bar .nav-li:hover{
-	opacity: 0.9;
+	opacity: 0.9 !important;
 }
 #navigation-bar .about-me-link{
 	background-color: rgb(218, 173, 93);
