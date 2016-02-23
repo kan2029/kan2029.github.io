@@ -382,7 +382,7 @@ h1{
 		font-size: 30px;
 		margin-top: 5px !important;
 	}
-	#resume{
+	#resume, #projects{
 		padding: 30px;
 	}
 	.resume-intro{
@@ -445,6 +445,15 @@ h1{
 	}
 	.traits-ul{
 		font-size: 20px;
+	}
+	.project-image-section{
+		padding: 0px;
+	}
+	.project{
+		padding: 15px;
+	}
+	.project-title h3{
+		text-align: center;
 	}
 
 }
