@@ -171,7 +171,7 @@ karan.model = {
 				description: "Location filter was implemented using javacript's 'Knockout' framework and Google maps. The task was to filter the list of locations as well as their corresponding markers on searching. Wikipedia API was also used to display information on user interaction",
 				imageUrl: 'img/neighborhood-map-img.png',
 				gitHubSrc: 'https://github.com/kan2029/frontend-nanodegree-neighborhood-map',
-				workingLink: 'projects/neighborhood_map/neighborhood_map.html',
+				workingLink: 'projects/neighborhood_map/index.html',
 				highlights: ['Knockout framework', 'Google Map API', 'MediaWiki API']
 			},
 			{
