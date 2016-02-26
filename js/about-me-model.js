@@ -6,7 +6,28 @@ karan.model = {
 		name: 'Karanbir Kajal',
 		traits: ['Web Developer', 'Musician', 'Foodie'],
 		imgSrc: 'img/my-picture.gif',
-		contacts: ['img/linkedin-contact.png', 'img/github-contact.png', 'img/youtube-contact.png', 'img/fb-contact.png', 'img/google-contact.png'],
+		contacts: [
+			{
+				imgSrc: 'img/linkedin-contact.png',
+				link: 'https://www.linkedin.com/in/karanbir-kajal-8a026688'
+			},
+			{	
+				 imgSrc: 'img/github-contact.png',
+				 link: 'https://github.com/kan2029'
+			},
+			{	
+				imgSrc: 'img/youtube-contact.png',
+				link: 'http://www.youtube.com/user/karanbirkajal'
+			},
+			{
+				imgSrc: 'img/fb-contact.png',
+				link: 'http://www.facebook.com/karanbirkajla'
+			},
+			{
+				imgSrc: 'img/google-contact.png',
+				link: 'https://plus.google.com/114755228560479582746/posts'
+			}	
+		]
 	},
 
 	resume: {

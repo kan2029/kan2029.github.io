@@ -67,7 +67,7 @@ karan.controller = {
 				$('.traits-ul').append('<li class="traits-li">'+this.basicInfo.traits[trait]+'</li>');
 			}
 			for(contact in this.basicInfo.contacts){
-				$('.contacts-ul').append('<li class="contacts-li"><section class="contacts-li-img-wrapper"><img src="'+this.basicInfo.contacts[contact]+'" class="contacts-li-img"></section></li>');
+				$('.contacts-ul').append('<li class="contacts-li"><a href="'+this.basicInfo.contacts[contact].link+'" target="_blank"><section class="contacts-li-img-wrapper"><img src="'+this.basicInfo.contacts[contact].imgSrc+'" class="contacts-li-img"></section></a></li>');
 			}
 			
 			if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
