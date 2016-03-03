@@ -231,7 +231,9 @@ karan.controller = {
 	};		
 
 $(document).ready(function(){
+
 	karan.controller.init();
+	
 	$(window).scroll(function(){
 		var linksOffsetTop = $('#links').offset().top;
 		var linksHeight = Number($('#links').css('height').slice(0,3));
