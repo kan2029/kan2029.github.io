@@ -114,11 +114,10 @@ karan.model = {
 				logo: 'img/cf.png',
 				period: 'Apr 2015 - Present',
 				description: '- Worked on various projects involving HTML, CSS, JavaScript, JQuery, Bootstrap, React, PHP, MySQL<br>'+ 
-							'- Developed tools for brokers, builders and internal service delivery team to post listing/project details'+
-							'- Worked on advertisements for our homepage<br>'+
+							'- Developed tools for brokers, builders and internal service delivery team to post listing/project details<br>'+
+							'- Worked on advertisements for our homepage using \'React\' framework<br>'+
 							'- Worked on some features of live-in tour (360 degree views) for mobile devices<br>'+
 							'- Have experience in responsive web design and handling different mobile devices'
-				//add description about react/ customer ads too
 			},
 			{
 				position: 'Manager',

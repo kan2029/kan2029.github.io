@@ -8,11 +8,11 @@ karan.controller = {
 		getResume: function(){
 			return karan.model.resume;
 		},
-		initResume: function(){
-			karan.viewResume.initResume()
-		},
 		getProjects: function(){
 			return karan.model.miniProjects;
+		},
+		initResume: function(){
+			karan.viewResume.initResume()
 		},
 		initProjects: function(){
 			karan.viewProjects.initProjects();
@@ -51,11 +51,22 @@ karan.controller = {
 			setTimeout(function(){
 				karan.viewBasicInfo.initLinks();
 			},2500);
-
 		},
 
 		initBackground: function(){
 			$('body').addClass('background');
+		},
+
+		animateLinks: function(element, topStart, topEnd, timeout){
+			setTimeout(function(){
+				$({top: topStart}).animate({top: topEnd}, {
+				    duration: 1000,
+				    easing: 'easeOutSine',
+				    step: function() {
+				        $('#'+element).css('top', this.top);
+				    }
+				});	
+			}, timeout);
 		},
 
 		initLinks: function(){
@@ -71,50 +82,11 @@ karan.controller = {
 			}
 			
 			if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-
-				$({top: -2000}).animate({top: 0}, {
-				    duration: 1000,
-				    easing: 'easeOutSine',
-				    step: function() {
-				        $('#main-content').css('top', this.top);
-				    }
-				});	
-				setTimeout(function(){
-					$({top: 3000}).animate({top: 0}, {
-					    duration: 1000,
-					    easing: 'easeOutSine',
-					    step: function() {
-					        $('#link1').css('top', this.top);
-					    }
-					});	
-				}, 100);
-				setTimeout(function(){
-					$({top: 3000}).animate({top: 0}, {
-					    duration: 1000,
-					    easing: 'easeOutSine',
-					    step: function() {
-					        $('#link2').css('top', this.top);
-					    }
-					});	
-				}, 200);
-				setTimeout(function(){
-					$({top: 3000}).animate({top: 0}, {
-					    duration: 1000,
-					    easing: 'easeOutSine',
-					    step: function() {
-					        $('#link3').css('top', this.top);
-					    }
-					});	
-				}, 300);
-				setTimeout(function(){
-					$({top: 3000}).animate({top: 0}, {
-					    duration: 1000,
-					    easing: 'easeOutSine',
-					    step: function() {
-					        $('#link4').css('top', this.top);
-					    }
-					});	
-				}, 400);
+				this.animateLinks('main-content', -2000, 0, 0);
+				this.animateLinks('link1', 3000, 0, 100);
+				this.animateLinks('link2', 3000, 0, 200);
+				this.animateLinks('link3', 3000, 0, 300);
+				this.animateLinks('link4', 3000, 0, 400);
 			}
 			else{
 				$('#main-content').css('top', 0);
@@ -123,8 +95,7 @@ karan.controller = {
 				$('#link3').css('top', 0);
 				$('#link4').css('top', 0);
 			}
-		},
-
+		}
 	};
 
 	karan.viewResume = {
@@ -135,10 +106,8 @@ karan.controller = {
 				$('html, body').animate({
 		        	scrollTop: $("#resume").offset().top -50
 		    	}, 300);
-		    	console.log($("#resume").offset().top);
 									
 				setTimeout(function(){
-
 					this.resume = karan.controller.getResume();
 					$('.resume-img').attr('src', this.resume.imageUrl);
 					$('.resume-name').html(this.resume.name);
@@ -231,6 +200,7 @@ karan.controller = {
 						projectSample.find('.project-description').html('<p>'+this.projects.projects[project].description+'</p>');
 						projectSample.find('.project-link').html('<label>Link: &nbsp</label><a href="'+this.projects.projects[project].workingLink+'" target="_blank">'+this.projects.projects[project].title+'</a>');
 						projectSample.find('.project-github').html('<label>Github source: &nbsp</label><a href="'+this.projects.projects[project].gitHubSrc+'" target="_blank">'+this.projects.projects[project].gitHubSrc+'</a>');
+						
 						for(var thisHighlight in this.projects.projects[project].highlights){
 							projectSample.find('.project-highlights').append('<li class="highlight">'+this.projects.projects[project].highlights[thisHighlight]+'</li>');
 						}
@@ -241,6 +211,7 @@ karan.controller = {
 			        	scrollTop: $("#projects").offset().top -50
 			    	}, 400);
 				}, 10);
+
 				setTimeout(function(){
 					$({count: 0}).animate({count: 1}, {
 					    duration: 1500,
@@ -262,7 +233,6 @@ karan.controller = {
 $(document).ready(function(){
 	karan.controller.init();
 	$(window).scroll(function(){
-		//to toggle navigation bar
 		var linksOffsetTop = $('#links').offset().top;
 		var linksHeight = Number($('#links').css('height').slice(0,3));
 		if($(window).scrollTop() > linksOffsetTop + linksHeight){
@@ -275,7 +245,6 @@ $(document).ready(function(){
 				    }
 				});	
 			}
-			//to highlight specific nav-li	
 			karan.controller.highlightLinkOnScroll('resume');
 			karan.controller.highlightLinkOnScroll('projects');	
 		}
