@@ -181,6 +181,14 @@ karan.model = {
 				workingLink: 'projects/reach_the_river/reach_the_river.html',
 				highlights: ['Object Oriented Javascript']
 			},
+			{
+				title: 'Test your memory',
+				description: "",
+				imageUrl: '',
+				gitHubSrc: 'https://github.com/kan2029/memory_game',
+				workingLink: 'projects/memory_game/index.html',
+				highlights: ['Object Oriented Javascript']
+			}
 		]
 	}
 }
