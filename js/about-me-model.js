@@ -183,11 +183,11 @@ karan.model = {
 			},
 			{
 				title: 'Test your memory',
-				description: "",
-				imageUrl: '',
+				description: 'An old classic that tests your memory. Finding it easy??? Difficulty level is in your hands ...',
+				imageUrl: 'img/memory.png',
 				gitHubSrc: 'https://github.com/kan2029/memory_game',
 				workingLink: 'projects/memory_game/index.html',
-				highlights: ['Object Oriented Javascript']
+				highlights: ['Vanilla JS']
 			}
 		]
 	}
